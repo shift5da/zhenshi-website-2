@@ -1,7 +1,7 @@
 <!--
  * @Author: Wuda
  * @Date: 2025-12-06 09:06:34
- * @LastEditTime: 2025-12-06 11:37:20
+ * @LastEditTime: 2025-12-06 23:43:27
  * @Description: 
 -->
 <!-- 联系方式 - begin -->
@@ -48,10 +48,8 @@
         真石科技（无锡）有限公司 &nbsp; &copy; 2023 - <span id="this_year"></span>
       </div>
       <div class="col-md-6 text-end">
-        <a href="https://beian.miit.gov.cn/" target="_blank"
-          style="text-decoration: none; color: #aaaaaa;">苏ICP备2024122677号-1</a>
-        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=32021302001677" class="ms-1"
-          style="text-decoration: none; color: #aaaaaa;" target="_blank">苏公网安备32021302001677</a>
+        <a href="https://beian.miit.gov.cn/" target="_blank" style="text-decoration: none; color: #aaaaaa;">苏ICP备2024122677号-1</a>
+        <a href="https://beian.mps.gov.cn/#/query/webSearch?code=32021302001677" class="ms-1" style="text-decoration: none; color: #aaaaaa;" target="_blank">苏公网安备32021302001677</a>
       </div>
     </div>
   </div>
@@ -64,20 +62,20 @@
 <script src="/public/assets/lazysizes.min.js"></script>
 
 <script>
-  $(document).ready(function () {
+  $(document).ready(function() {
 
     AOS.init();
 
     $('#this_year').text(new Date().getFullYear());
 
     var phoneParts = [
-      '137',  // 区号
-      '1658',  // 前三位
-      '8006'  // 后四位
+      '137', // 区号
+      '1658', // 前三位
+      '8006' // 后四位
     ];
 
     // 延迟500ms生成，增加爬虫抓取难度
-    setTimeout(function () {
+    setTimeout(function() {
       $('#phoneNumber').text(phoneParts.join('-'));
     }, 500);
 
