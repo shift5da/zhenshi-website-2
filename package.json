@@ -1,0 +1,26 @@
+{
+  "name": "zhenshi-website-2",
+  "version": "1.0.0",
+  "description": "基于express的真石科技网站",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development nodemon ./src/index.ts",
+    "build": "NODE_ENV=production ./node_modules/.bin/ncc build ./src/index.ts -m -o ./dist",
+    "pm2": "NODE_ENV=production pm2 start ./dist/index.js -i 2 --name zhenshi-website",
+    "pm2_stop": "NODE_ENV=production pm2 stop zhenshi-website"
+  },
+  "author": "wuda",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/ncc": "^0.38.4",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

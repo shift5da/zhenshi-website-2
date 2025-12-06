@@ -1,0 +1,306 @@
+/* === BASE HEADING === */
+
+.heading h1 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  /* font-family: "Raleway", sans-serif; */
+  font-weight: 600;
+  font-size: 3em;
+  color: var(--bs-light);
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.heading h1 span {
+  display: block;
+  line-height: 1.3;
+  margin-top: 0.5em;
+}
+
+.heading h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+
+
+/* === HEADING STYLE #2 === */
+.heading .two h1 {
+  text-transform: capitalize;
+  /* margin-bottom: ; */
+  text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+
+}
+
+.heading .two h1:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  content: "";
+  background-color: rgb(230, 0, 0);
+}
+
+.heading .two h1 span {
+  font-size: 0.5em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 2em;
+  padding-left: 0.25em;
+  /* color: rgba(0, 0, 0, 0.4); */
+  color: var(--bs-light);
+  padding-bottom: 10px;
+  font-style: italic;
+}
+
+.heading .alt-two h1 {
+  letter-spacing: 2px;
+}
+
+.heading .alt-two h1:before {
+  left: 50%;
+  margin-left: -30px;
+}
+
+
+/* === HEADING STYLE #3 === */
+.heading .three h1 {
+  font-size: 20px;
+  font-weight: 550;
+  letter-spacing: 0;
+  line-height: 1.5em;
+  padding-bottom: 15px;
+  position: relative;
+  font-style: italic;
+  /* color: var(--bs-secondary-color) */
+  color: rgb(208, 18, 27);
+}
+
+.heading .three h1:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 100px;
+  background-color: var(--bs-border-color);
+}
+
+.heading .three h1:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 1px;
+  width: 95%;
+  max-width: 400px;
+  background-color: var(--bs-border-color);
+}
+
+
+
+/* 页面css -- begin */
+
+/* 隐藏所有滚动条 */
+::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+/* 在移动端调整字体大小 */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+    /* 手机端字体稍小 */
+  }
+}
+
+/* 在超小屏幕（如 iPhone SE）进一步调整 */
+@media (max-width: 480px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+body {
+  -ms-overflow-style: none;
+  /* IE和Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow: auto;
+
+  overflow-y: scroll
+}
+
+
+/* 页面css -- end */
+
+
+
+
+/* 图片，鼠标移动上去后，放大、显示蒙版、显示颜色  -- start */
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  /* border-radius: 15px; */
+  /* 圆角大小 */
+  overflow: hidden;
+  /* 确保圆角效果 */
+  /* margin: 20px; */
+  height: 280px;
+  width: 100%;
+}
+
+.image-container .hover-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 保持比例填充容器 */
+  transition: all 0.3s ease;
+}
+
+.image-container .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(230, 0, 0, 0);
+  /* 初始透明 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.image-container .overlay-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.image-container .overlay-subtitle {
+  font-size: 16px;
+}
+
+.image-container:hover .image-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  /* 红色半透明 */
+  opacity: 1;
+}
+
+.image-container:hover .hover-image {
+  transform: scale(1.05);
+  /* 可选：悬停时轻微放大 */
+}
+
+/* 地理标志图标容器 */
+.image-container .geo-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 42px;
+  height: 42px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* 地理标志图标 */
+.image-container .geo-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* 悬停时图标效果 */
+.image-container:hover .geo-indicator {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* 图片，鼠标移动上去后，放大、显示蒙版、显示颜色  -- end */
+
+
+.nav-item a.active {
+  border-bottom: 2px solid rgb(230, 0, 0);
+}
+
+
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 15em;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.hero>* {
+  position: relative;
+  z-index: 1;
+}
+
+
+.news_content p {
+  line-height: 34px;
+  text-indent: 2em;
+  font-size: 18px;
+}
+
+.news_content img {
+  margin-bottom: 20px;
+}
+
+.news_list {
+  margin-top: 20px;
+}
+
+.news_list .title{
+  font-size: 24px;
+  margin-bottom: 4px;
+  font-weight: 600;
+
+}
+
+.news_list .content{
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 30px;
+}
