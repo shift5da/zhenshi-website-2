@@ -21,10 +21,6 @@
   }
 }
 
-html {
-  width: fit-content;
-}
-
 body {
   -ms-overflow-style: none;
   /* IE和Edge */
