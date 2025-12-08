@@ -6,10 +6,6 @@
   /* Chrome, Safari, Opera */
 }
 
-html {
-  font-size: 16px;
-}
-
 /* 在移动端调整字体大小 */
 @media (max-width: 768px) {
   html {
@@ -25,25 +21,20 @@ html {
   }
 }
 
+html {
+  width: fit-content;
+}
+
 body {
   -ms-overflow-style: none;
   /* IE和Edge */
   scrollbar-width: none;
   /* Firefox */
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
   overflow: auto;
-
-  overflow-y: scroll
+  overflow-y: scroll;
 }
 
-
-
 /* 页面css -- end */
-
-
-
 
 /* === BASE HEADING === */
 
@@ -71,14 +62,11 @@ body {
   font-weight: 600;
 }
 
-
-
 /* === HEADING STYLE #2 === */
 .heading .two h1 {
   text-transform: capitalize;
   /* margin-bottom: ; */
   text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-
 }
 
 .heading .two h1:before {
@@ -120,7 +108,6 @@ body {
   }
 }
 
-
 /* === HEADING STYLE #3 === */
 .heading .three h1 {
   font-size: 20px;
@@ -154,13 +141,6 @@ body {
   max-width: 400px;
   background-color: var(--bs-border-color);
 }
-
-
-
-
-
-
-
 
 /* 图片，鼠标移动上去后，放大、显示蒙版、显示颜色  -- begin */
 
@@ -256,12 +236,9 @@ body {
 
 /* 图片，鼠标移动上去后，放大、显示蒙版、显示颜色  -- end */
 
-
 .nav-item a.active {
   border-bottom: 2px solid rgb(230, 0, 0);
 }
-
-
 
 /* 每个部分的开头部分  --  begin */
 
@@ -280,7 +257,7 @@ body {
 }
 
 .banner::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -290,13 +267,12 @@ body {
   z-index: 0;
 }
 
-.banner>* {
+.banner > * {
   position: relative;
   z-index: 1;
 }
 
 /* 每个部分的开头部分  --  end */
-
 
 /* 新闻内容  --  begin */
 
@@ -312,41 +288,36 @@ body {
 
 /* 新闻内容  --  end */
 
-
 /* 新闻列表  --  begin */
 
 .news_list {
   margin-top: 20px;
 }
 
-.news_list .title{
+.news_list .title {
   font-size: 24px;
   margin-bottom: 4px;
   font-weight: 600;
-
 }
 
-.news_list .content{
+.news_list .content {
   margin-top: 30px;
   font-size: 18px;
   line-height: 30px;
 }
 
-
 /* 新闻列表  --  end */
-
-
 
 /* 首页 carousel 中的标题 --  begin */
 
 .hero {
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
   height: 320px;
 }
 
 .hero .title {
-  font-size: 4rem; 
-  font-weight: 800; 
+  font-size: 4rem;
+  font-weight: 800;
   padding-bottom: 10px;
 }
 
@@ -366,10 +337,9 @@ body {
 }
 
 .hero .subtitle p {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   font-style: italic;
 }
-
 
 /* 在移动端调整字体大小 */
 @media (max-width: 768px) {
@@ -378,8 +348,8 @@ body {
   }
 
   .hero .title {
-    font-size: 2.5rem; 
-    font-weight: 800; 
+    font-size: 2.5rem;
+    font-weight: 800;
   }
 
   .hero .subtitle {
@@ -387,11 +357,10 @@ body {
   }
 
   .hero .subtitle p {
-    font-size: 1rem; 
+    font-size: 1rem;
     font-style: italic;
     margin: 0.3rem;
   }
 }
-
 
 /* 首页 carousel 中的标题 --  end */
