@@ -100,13 +100,13 @@ body {
 /* 在移动端调整字体大小 */
 @media (max-width: 768px) {
   .heading .two h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: 600;
   }
-
-  .heading .two h1 span {
-    font-size: 0.6em;
+  r .heading .two h1 span {
+    font-size: 1.2rem;
     font-weight: 500;
+    line-height: 1rem;
   }
 }
 
@@ -347,11 +347,11 @@ body {
 @media (max-width: 768px) {
   .hero {
     height: 220px;
-    padding-top: 50px;
+    padding-top: 70px;
   }
 
   .hero .title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 800;
   }
 
@@ -360,7 +360,7 @@ body {
   }
 
   .hero .subtitle p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-style: italic;
     margin: 0.3rem;
   }
