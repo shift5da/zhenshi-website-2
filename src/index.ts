@@ -1,7 +1,7 @@
 /*
  * @Author: Wuda
  * @Date: 2025-11-17 20:19:27
- * @LastEditTime: 2025-12-06 14:13:44
+ * @LastEditTime: 2025-12-10 11:45:24
  * @Description:
  */
 import express from "express";
@@ -25,6 +25,13 @@ app.get("/index.html", (req, res) => {
 app.get("/sitemap.xml", (req, res) => {
   res.header("Content-Type", "application/xml");
   res.sendFile(path.join(__dirname, "../public", "sitemap.xml"));
+});
+
+app.get("/seasonal_gi", (req, res) => {
+  res.render("seasonal_gi/index", {
+    activeMenu: "gi",
+    subActiveMenu: "seasonal_gi",
+  });
 });
 
 app.get("/news/251201", (req, res) => {

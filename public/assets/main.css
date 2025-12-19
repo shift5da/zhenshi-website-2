@@ -367,3 +367,118 @@ body {
 }
 
 /* 首页 carousel 中的标题 --  end */
+
+/* 对于navbar-item dropdown 的相关修改 -- begin */
+.dropdown:hover .dropdown-menu {
+  display: block; /* 鼠标悬停，打开菜单 */
+}
+
+/* 1. 深色背景 */
+.dropdown-menu-dark {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* 2. 白色文字 */
+.dropdown-menu-dark .dropdown-item {
+  color: #ffffff;
+  margin: 5px 0px;
+  text-align: center;
+}
+
+/* 3. 悬停效果 */
+.dropdown-menu-dark .dropdown-item:hover {
+  background-color: rgb(230, 0, 0, 0.8);
+}
+
+/* 4. 选中状态 - 红色 */
+.dropdown-menu-dark .dropdown-item.active {
+  background-color: rgb(230, 0, 0) !important;
+  color: #ffffff !important;
+}
+
+/* 对于navbar-item dropdown 的相关修改 -- end */
+
+/* 时令地标 -- begin */
+
+.seasonal_gi_content {
+  width: 100%;
+  padding: 2rem 0rem;
+}
+
+.seasonal_gi_content .title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.seasonal_gi_content .subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  font-style: italic;
+  color: var(--bs-secondary-color);
+}
+
+.seasonal_gi_content p {
+  line-height: 34px;
+  text-indent: 2em;
+  font-size: 18px;
+}
+
+.seasonal_gi_content .heading .three {
+  margin-bottom: 1.5rem;
+}
+
+.seasonal_gi_content .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: rgb(230, 0, 0);
+  font-weight: 600;
+}
+
+.seasonal_gi_content .image_title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 0.5rem;
+}
+
+.seasonal_gi_content .image_subtitle {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 0.5rem;
+  color: var(--bs-secondary-color);
+}
+
+/* 时令地标 -- end */
+
+/* bd-callout 基础样式 -- begin */
+.bd-callout {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  background-color: #f8f9fa;
+  border-left: 0.25rem solid rgb(230, 0, 0);
+  border-radius: 0.25rem;
+}
+
+.bd-callout h4,
+.bd-callout h5 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.bd-callout p {
+  font-size: 1rem;
+  text-indent: 0em;
+}
+
+.bd-callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* bd-callout 基础样式 -- end */

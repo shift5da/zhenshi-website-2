@@ -1,7 +1,7 @@
 <!--
  * @Author: Wuda
  * @Date: 2025-12-06 09:05:43
- * @LastEditTime: 2025-12-08 10:12:25
+ * @LastEditTime: 2025-12-10 12:21:02
  * @Description: 
 -->
 
@@ -18,13 +18,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/#top">首页</a>
+          <a class="nav-link" href="/#top">首页</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/#cases">成功案例</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/#gi">地理标志产品</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle <%= typeof activeMenu !== 'undefined' && activeMenu === 'gi' ? 'active' : '' %>" href="#" role="button" aria-expanded="false">
+            地理标志产品
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="/#gi">什么是地理标志产品</a></li>
+            <li><a class="dropdown-item <%= typeof subActiveMenu !== 'undefined' && subActiveMenu === 'seasonal_gi' ? 'active' : '' %>" href="/seasonal_gi">时令地标 · 每月鲜赏</a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/#products">我们产品</a>
