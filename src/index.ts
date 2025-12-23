@@ -1,7 +1,7 @@
 /*
  * @Author: Wuda
  * @Date: 2025-11-17 20:19:27
- * @LastEditTime: 2025-12-10 11:45:24
+ * @LastEditTime: 2025-12-19 19:29:11
  * @Description:
  */
 import express from "express";
@@ -36,6 +36,10 @@ app.get("/seasonal_gi", (req, res) => {
 
 app.get("/news/251201", (req, res) => {
   res.render("news/251201");
+});
+
+app.get("/news/251219", (req, res) => {
+  res.render("news/251219");
 });
 
 app.listen(port, () => {
