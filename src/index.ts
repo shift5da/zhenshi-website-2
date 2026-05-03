@@ -1,7 +1,7 @@
 /*
  * @Author: Wuda
  * @Date: 2025-11-17 20:19:27
- * @LastEditTime: 2025-12-19 19:29:11
+ * @LastEditTime: 2026-05-03 22:29:58
  * @Description:
  */
 import express from "express";
@@ -40,6 +40,10 @@ app.get("/news/251201", (req, res) => {
 
 app.get("/news/251219", (req, res) => {
   res.render("news/251219");
+});
+
+app.get("/news/260503", (req, res) => {
+  res.render("news/260503");
 });
 
 app.listen(port, () => {
